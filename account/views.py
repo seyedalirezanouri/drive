@@ -28,11 +28,7 @@ class UserRegisterationView(CreateAPIView):
             return Response(status=status.HTTP_201_CREATED)
         
 @extend_schema(
-    tags=['User'],
-    responses={
-        201: OpenApiResponse(),
-        400: OpenApiResponse(),
-    }
+    tags=['User']
 )
 class UserLoginView(TokenObtainPairView):
     pass
